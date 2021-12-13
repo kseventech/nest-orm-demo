@@ -9,6 +9,7 @@ export class TypeormConfig {
       type: 'postgres',
       username: 'user_1',
       password: 'test1',
+      database: 'orm-demo-db',
       entities: getMetadataArgsStorage().tables.map((tbl) => tbl.target),
       synchronize: false,
       migrations: ['dist/src/db/migrations/*.js'],
