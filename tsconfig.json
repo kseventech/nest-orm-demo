@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "types": ["jest", "node"],
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true, 
+    "esModuleInterop": true,
+    "noImplicitOverride": true, // Ensure overriding members in derived classes are marked with an override modifier
+    // noUnusedParameters, noUnusedLocals false in template
+    "noUnusedLocals": false, // Enable error reporting when a local variables aren't read.
+    "noUnusedParameters": false, // Raise an error when a function parameter isn't read
+    "strictFunctionTypes": true, // When assigning functions, check to ensure parameters and the return values are subtype-compatible.
+    "allowUnusedLabels": false, // Indicate an attempt to write an object literal:
+    // "strictNullChecks": true, // Null and undefined are effectively ignored by the language. This can lead to unexpected errors at runtime.
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true
+  }
+}
