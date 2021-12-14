@@ -1,4 +1,4 @@
-import { Table, Column, Model, BelongsTo } from 'sequelize-typescript';
+import { Table, Column, Model, BelongsTo, DataType, ForeignKey } from 'sequelize-typescript';
 import { User } from 'src/entities/user/models/user';
 
 @Table({
@@ -6,14 +6,31 @@ import { User } from 'src/entities/user/models/user';
   timestamps: true,
 })
 export class Cat extends Model<Cat> {
-  @Column
+
+  @Column({
+    type: DataType.STRING,
+    allowNull: false
+  })
   name: string;
 
-  @Column
+  @Column({
+    type: DataType.INTEGER,
+    allowNull: false
+  })
   age: number;
 
-  @Column
+  @Column({
+    type: DataType.STRING,
+    allowNull: false
+  })
   breed: string;
+
+  @ForeignKey(() => User)
+  @Column({
+      type: DataType.INTEGER,
+      allowNull: false,
+  })
+  userId: number;
 
   @BelongsTo(() => User)
   user: User;

@@ -1,5 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { SequelizeOptionsFactory, SequelizeModuleOptions } from '@nestjs/sequelize';
+import { Cat } from 'src/entities/cat/models/cat';
+import { User } from 'src/entities/user/models/user';
 
 @Injectable()
 export class SequelizeConfig implements SequelizeOptionsFactory {
@@ -12,6 +14,7 @@ export class SequelizeConfig implements SequelizeOptionsFactory {
       password: 'test1',
       database: 'sequelize-demo-db',
       autoLoadModels: true,
+      models: [User,Cat],
       synchronize: true,
     };
   }

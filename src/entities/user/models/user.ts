@@ -1,5 +1,5 @@
 
-import { Table, Column, Model, HasMany } from 'sequelize-typescript';
+import { Table, Column, Model, HasMany, PrimaryKey } from 'sequelize-typescript';
 import { Cat } from 'src/entities/cat/models/cat';
 
 @Table({
@@ -7,12 +7,16 @@ import { Cat } from 'src/entities/cat/models/cat';
     timestamps: true
 })
 export class User extends Model<User> {
+  
+  @Column({primaryKey: true})
+  override id: number;
+
   @Column
   name: string;
 
   @Column
   age: number;
 
-  @HasMany(() => Cat)
-  cats: Cat[];
+  // @HasMany(() => Cat)
+  // cats: Cat[];
 }
