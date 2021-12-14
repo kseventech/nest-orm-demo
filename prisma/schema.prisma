@@ -12,16 +12,14 @@ datasource db {
 
 model User {
   id    Int     @default(autoincrement()) @id
-  email String  @unique
-  name  String?
-  posts Post[]
+  name String  
+  age String
+  cats  Cat[]
 }
 
-model Post {
+model Cat {
   id        Int      @default(autoincrement()) @id
-  title     String
-  content   String?
-  published Boolean? @default(false)
-  author    User?    @relation(fields: [authorId], references: [id])
-  authorId  Int?
+  name     String
+  age   String?
+  breed String
 }
