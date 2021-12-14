@@ -1,9 +1,9 @@
-
-import { Table, Column, Model } from 'sequelize-typescript';
+import { Table, Column, Model, BelongsTo } from 'sequelize-typescript';
+import { User } from 'src/entities/user/models/user';
 
 @Table({
   tableName: 'cats',
-  timestamps: true
+  timestamps: true,
 })
 export class Cat extends Model<Cat> {
   @Column
@@ -14,4 +14,7 @@ export class Cat extends Model<Cat> {
 
   @Column
   breed: string;
+
+  @BelongsTo(() => User)
+  user: User;
 }

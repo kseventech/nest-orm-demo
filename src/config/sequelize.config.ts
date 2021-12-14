@@ -10,7 +10,7 @@ export class SequelizeConfig implements SequelizeOptionsFactory {
       port: 5432,
       username: 'user_1',
       password: 'test1',
-      database: 'orm-demo-db',
+      database: 'sequelize-demo-db',
       autoLoadModels: true,
       synchronize: true,
     };
