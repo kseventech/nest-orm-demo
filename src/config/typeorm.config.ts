@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { getMetadataArgsStorage } from 'typeorm';
+import { Cat } from 'src/entities/cat/models/cat.entity';
+import { User } from 'src/entities/user/models/user.entity';
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 
 @Injectable()
@@ -9,8 +10,8 @@ export class TypeormConfig {
       type: 'postgres',
       username: 'user_1',
       password: 'test1',
-      database: 'orm-demo-db',
-      entities: getMetadataArgsStorage().tables.map((tbl) => tbl.target),
+      database: 'typeorm-demo-db',
+      entities: [User, Cat],
       synchronize: false,
       migrations: ['dist/src/db/migrations/*.js'],
       cli: {
