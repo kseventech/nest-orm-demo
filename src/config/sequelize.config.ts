@@ -13,9 +13,9 @@ export class SequelizeConfig implements SequelizeOptionsFactory {
       username: 'user_1',
       password: 'test1',
       database: 'sequelize-demo-db',
-      autoLoadModels: true,
-      models: [User,Cat],
-      synchronize: true,
+      autoLoadModels: false,
+      models: [User, Cat],
+      synchronize: false,
     };
   }
 }

@@ -8,6 +8,7 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true, 
     "esModuleInterop": true,
+    "allowJs": true,
     "noImplicitOverride": true, // Ensure overriding members in derived classes are marked with an override modifier
     // noUnusedParameters, noUnusedLocals false in template
     "noUnusedLocals": false, // Enable error reporting when a local variables aren't read.
