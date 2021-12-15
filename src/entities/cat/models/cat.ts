@@ -2,33 +2,27 @@ import { Table, Column, Model, BelongsTo, DataType, ForeignKey } from 'sequelize
 import { User } from 'src/entities/user/models/user';
 
 @Table({
-  tableName: 'cats',
+  tableName: 'Cats',
   timestamps: true,
+  modelName: 'Cats',
 })
 export class Cat extends Model<Cat> {
-
   @Column({
     type: DataType.STRING,
-    allowNull: false
+    allowNull: false,
   })
   name: string;
 
   @Column({
     type: DataType.INTEGER,
-    allowNull: false
+    allowNull: false,
   })
   age: number;
 
-  @Column({
-    type: DataType.STRING,
-    allowNull: false
-  })
-  breed: string;
-
   @ForeignKey(() => User)
   @Column({
-      type: DataType.INTEGER,
-      allowNull: false,
+    type: DataType.INTEGER,
+    allowNull: false,
   })
   userId: number;
 

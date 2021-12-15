@@ -19,7 +19,9 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "migration:generate": "npx sequelize-cli migration:generate --name"
+    "migration:generate": "node ./node_modules/sequelize-cli/lib/sequelize migration:generate --name",
+    "migration:up": "node ./node_modules/sequelize-cli/lib/sequelize db:migrate",
+    "migration:down": "node ./node_modules/sequelize-cli/lib/sequelize db:migrate:undo:all"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",

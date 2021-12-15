@@ -1,9 +1,9 @@
 import { Table, Column, Model, DataType } from 'sequelize-typescript';
 
 @Table({
-  tableName: 'users',
+  tableName: 'Users',
   timestamps: true,
-  modelName: 'users',
+  modelName: 'Users',
 })
 export class User extends Model<User> {
   @Column({
@@ -11,12 +11,6 @@ export class User extends Model<User> {
     allowNull: false,
   })
   name: number;
-
-  @Column({
-    type: DataType.INTEGER,
-    allowNull: false,
-  })
-  test: number;
 
   @Column({
     type: DataType.INTEGER,
