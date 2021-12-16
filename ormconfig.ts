@@ -13,3 +13,5 @@ const typeormConfig: TypeOrmModuleOptions = {
   },
 };
 export default typeormConfig;
+
+module.exports = typeormConfig;

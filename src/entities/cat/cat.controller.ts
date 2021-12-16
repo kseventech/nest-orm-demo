@@ -1,4 +1,12 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import { CatService } from './cat.service';
 
-@Controller()
-export class CatController {}
+@Controller('cat')
+export class CatController {
+  constructor(private catService: CatService) {}
+
+  @Get()
+  createCat() {
+    return this.catService.create();
+  }
+}
