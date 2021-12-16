@@ -2,7 +2,6 @@ import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 
 const typeormConfig: TypeOrmModuleOptions = {
   type: 'postgres',
-  // driver: 'postgres',
   username: 'user_1',
   password: 'test1',
   database: 'typeorm-demo-db',

@@ -14,6 +14,9 @@ export class Cat {
   @Column()
   breed: string;
 
+  @Column()
+  test: string;
+
   @CreateDateColumn({ type: 'timestamp' })
   createdAt: Date;
 
